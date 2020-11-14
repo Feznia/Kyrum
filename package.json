@@ -1,0 +1,25 @@
+{
+  "name": "kyrum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feznia/Kyrum.git"
+  },
+  "author": "Feznia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Feznia/Kyrum/issues"
+  },
+  "homepage": "https://github.com/Feznia/Kyrum#readme",
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "discord.js": "^12.4.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security"
+  }
+}
