@@ -5,7 +5,7 @@ module.exports = {
       aliases: [],
       category: "Fun",
       cooldown: "",
-      description: "Play some rock, paper,scissors with me!",
+      description: "Play some rock, paper, scissors with me!",
       usage: "=rps",
     run: async (client, message, args) => {
         const randomChoice = ["🗻", "📄", "✂️"]

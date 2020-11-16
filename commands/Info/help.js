@@ -4,7 +4,7 @@ const usedCommand = new Set();
 module.exports = {
     name: "help",
       aliases: [],
-      category: "fun",
+      category: "Info",
       cooldown: "5 seconds",
       description: "Need some help? This is the perfect command for you!",
       usage: "=help || =help <command>",

@@ -3,7 +3,7 @@ const usedCommand = new Set();
 
 module.exports = {
     name: "nick",
-      aliases: ["nickname"],
+      aliases: ["nickname", "name"],
       category: "Utilities",
       cooldown: "5 seconds",
       description: "Change your nickame",

@@ -3,7 +3,7 @@ const usedCommand = new Set();
 
 module.exports = {
     name: "snipe",
-        aliases: ["sm", "slomo"],
+        aliases: [],
         category: "Utilities",
         cooldown: "5 seconds",
         description: "Snipe a deleted message!",
