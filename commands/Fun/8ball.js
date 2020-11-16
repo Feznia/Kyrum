@@ -11,9 +11,9 @@ const replies = [
 
 module.exports = {
     name: "8ball",
-      aliases: [],
+      aliases: ["8b"],
       category: "Fun",
-      cooldown: "5 seconds",
+      cooldown: "8 seconds",
       description: "Wish to know your future? Try this!",
       usage: "=8ball <question>",
     run: async (client, message, args) => {
@@ -22,7 +22,12 @@ module.exports = {
         let result = replies[Math.floor(Math.random()*(replies.length))]
 
     if(usedCommand.has(message.author.id)){
-        message.channel.send(`You cannot use the command beacuse of the cooldown.`)
+        const cooldownEmbed = new Discord.MessageEmbed()
+        .setTitle("Woahh Calm Down")
+        .setDescription(`Slow down dude, this command has a cooldown of **8** seconds.`)
+        .setColor("PURPLE")
+    
+        message.channel.send(cooldownEmbed)
     } else {
         
         message.channel.send(`🎱 ${result}`);
@@ -30,7 +35,7 @@ module.exports = {
         usedCommand.add(message.author.id);
         setTimeout(() => {
             usedCommand.delete(message.author.id);
-        }, 5000); //You can set the ammount of the cooldown here! Its Formated to Miliseconds.
+        }, 8000); //You can set the ammount of the cooldown here! Its Formated to Miliseconds.
     }
 }
 }

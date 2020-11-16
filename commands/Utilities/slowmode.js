@@ -6,16 +6,19 @@ module.exports = {
         description: "Set the slowmode for the channel!",
         usage: "=slowmode <time> <reason>",
         run: async (bot, message, args) => {
-            if (!args[0])
-            return message.channel.send(
-            `You did not specify the time in seconds you wish to set this channel's slow mode too!`
-            );
-            if (isNaN(args[0])) return message.channel.send(`That is not a number!`);
+            
+
+    if (!message.member.permissions.has("MANAGE_CHANNELS")) return message.channel.send("You don't have permission to set the slowmode, you are missing the `MANAGE_CHANNELS` permission.");
+
+    if (!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send("I don't have permission set the slowmode, I am missing the `MANAGE_CHANNELS` permission.");
+
+           
+            
+            if (isNaN(args[0])) return message.channel.send(`Specify a number (in seconds)!`);
 
         message.channel.setRateLimitPerUser(args[0]);
         message.channel.send(
-        `**${message.author.name}** has set the slowmode of this channel to ***${args[0]}*** seconds.`
-        );
-    },
+        `**${message.author.name}** has set the slowmode of this channel to ***${args[0]}*** seconds.`);
+        
+    }
 };
-  

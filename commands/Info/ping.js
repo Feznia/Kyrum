@@ -13,7 +13,7 @@ module.exports = {
 if(usedCommand.has(message.author.id)){
     const cooldownEmbed = new Discord.MessageEmbed()
     .setTitle("Woahh Calm Down")
-    .setDescription(`Slow down, this command has a cooldown of **10** seconds.`)
+    .setDescription(`Slow down dude, this command has a cooldown of **10** seconds.`)
     .setColor("PURPLE")
 
     message.channel.send(cooldownEmbed)
