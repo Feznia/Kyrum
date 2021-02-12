@@ -35,7 +35,7 @@ module.exports = {
         usedCommand.add(message.author.id);
         setTimeout(() => {
             usedCommand.delete(message.author.id);
-        }, 8000); //You can set the ammount of the cooldown here! Its Formated to Miliseconds.
+        }, 8000);
     }
 }
 }

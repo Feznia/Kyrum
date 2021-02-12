@@ -18,7 +18,7 @@ module.exports = {
 
         message.channel.setRateLimitPerUser(args[0]);
         message.channel.send(
-        `**${message.author.name}** has set the slowmode of this channel to ***${args[0]}*** seconds.`);
+        `**${message.author}** has set the slowmode of this channel to ***${args[0]}*** seconds.`);
         
     }
 };

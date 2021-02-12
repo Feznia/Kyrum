@@ -42,11 +42,15 @@ module.exports = {
             var embed = new Discord.MessageEmbed()
             .setAuthor(`${command.name} Command`)
             .setDescription(`
-            - **Command's Description:** ${command.description || "There is no Description for this command."}
-            - **Command's Usage:** ${command.usage || "No Usage"}
-            - **Command's Cooldown:** ${command.cooldown || "No Cooldown"}
-            - **Command's Permissions:** ${command.accessableby || "Members"}
+            
             - **Command's Aliases:** ${command.aliases || "No Aliases"}
+            - **Command's Usage:** ${command.category || "No Category"}
+            - **Command's Cooldown:** ${command.cooldown || "No Cooldown"}    
+            - **Command's Description:** ${command.description || "No Description"}
+            - **Command's Permissions:** ${command.permissions || "No Permissions"}
+            - **Command's Usage:** ${command.usage || "No Usage"}
+            
+            
             `)
             .setColor('BLUE')
 
