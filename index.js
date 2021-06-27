@@ -110,4 +110,4 @@ client.snipes = new Map()
   message.client.snipes.set(message.channel.id, snipes)
   });
 
-client.login(token);
+client.login(process.inv.token);
