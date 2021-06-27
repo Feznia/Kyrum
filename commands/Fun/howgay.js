@@ -3,7 +3,7 @@ const usedCommand = new Set();
 
 module.exports = {
     name: "howgay",
-      aliases: [],
+      aliases: ['gayrate'],
       category: "Fun",
       cooldown: "10 seconds",
       description: "How gay are you?",
@@ -117,14 +117,14 @@ module.exports = {
         
             let helpembed = new Discord.MessageEmbed()
             .setTitle("🏳️‍🌈 How Gay Machine 🏳️‍🌈")
-            .setColor(`PURPLE`)
+            .setColor(`BLACK`)
             .addField("Answer", `\`\`\`${result}\`\`\``);
         
             if(usedCommand.has(message.author.id)){
                 const cooldownEmbed = new Discord.MessageEmbed()
     .setTitle("Woahh Calm Down")
     .setDescription(`Slow down dude, this command has a cooldown of **10** seconds.`)
-    .setColor("PURPLE")
+    .setColor("BLACK")
 
     message.channel.send(cooldownEmbed)
             } else {

@@ -20,7 +20,7 @@ module.exports = {
         return message.channel.send("What would you like your nickname to be?");
     }
 
-    User.setNickname(name)
+    
 
         if(usedCommand.has(message.author.id)){
             const cooldownEmbed = new Discord.MessageEmbed()
@@ -30,14 +30,21 @@ module.exports = {
         
             message.channel.send(cooldownEmbed)
     } else {
+
+        User.setNickname(name) //moved
+
+        const nickEmbed = new Discord.MessageEmbed()
+            .setTitle("Nickname change!")
+            .setDescription(`Nickname changed to ${name}!`)
+            .setFooter("If this didn't work it is because you have a higher role than the bot")
+            .setColor("BLACK")
         
-        message.channel.send("Username changed Successfully!")
+        message.channel.send(nickEmbed)
         
         usedCommand.add(message.author.id);
         setTimeout(() => {
             usedCommand.delete(message.author.id);
         }, 5000); //You can set the ammount of the cooldown here! Its Formated to Miliseconds.
     }
-    message.delete()
     }
 }

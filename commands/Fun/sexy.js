@@ -14,14 +14,14 @@ module.exports = {
     const loveLevel = "💖".repeat(loveIndex) + "💔".repeat(10 - loveIndex);
 
     const embed = new Discord.MessageEmbed()
-        .setColor("GREEN")
+        .setColor("BLACK")
         .addField(`☁ **${message.member.displayName}** is  **:revolving_hearts: ${Math.floor(love)}%** Sexy Today!`,`\n\n${loveLevel}`);
 
     if(usedCommand.has(message.author.id)){
         const cooldownEmbed = new Discord.MessageEmbed()
         .setTitle("Woahh Calm Down")
         .setDescription(`Slow down dude, this command has a cooldown of **10** seconds.`)
-        .setColor("PURPLE")
+        .setColor("BLACK")
     
         message.channel.send(cooldownEmbed)
     } else {

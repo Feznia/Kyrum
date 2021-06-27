@@ -18,7 +18,7 @@ module.exports = {
         msg.author.displayAvatarURL({ dynamic: true, size: 256 })
       )
       .setDescription(msg.content)
-      .setColor('Purple')
+      .setColor('PURPLE')
       .setTimestamp()
       .setFooter(`| Get sniped you noob |`);
     if (msg.attachment) Embed.setImage(msg.attachment);

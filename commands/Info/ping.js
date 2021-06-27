@@ -3,10 +3,10 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: "ping",
-      aliases: ["latency"],
+      aliases: ['latency'],
       category: "info",
       cooldown: "10 seconds",
-      description: "Returns latency and API ping",
+      description: "Returns latency/API ping",
       usage: "=ping",
     run: async (client, message, args) => {
 
@@ -14,7 +14,7 @@ if(usedCommand.has(message.author.id)){
     const cooldownEmbed = new Discord.MessageEmbed()
     .setTitle("Woahh Calm Down")
     .setDescription(`Slow down dude, this command has a cooldown of **10** seconds.`)
-    .setColor("PURPLE")
+    .setColor("BLACK")
 
     message.channel.send(cooldownEmbed)
 } else {

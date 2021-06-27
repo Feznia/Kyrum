@@ -3,7 +3,7 @@ const usedCommand = new Set();
 
 module.exports = {
     name: "howsmart",
-      aliases: [],
+      aliases: ['smartrate', 'iq', 'IQ'],
       category: "Fun",
       cooldown: "10 seconds",
       description: "How smart are you?",
@@ -117,7 +117,7 @@ module.exports = {
 
              let helpembed = new Discord.MessageEmbed()
              .setTitle("How Smart Machine")
-             .setColor(`PURPLE`)
+             .setColor(`BLACK`)
              .addField("Answer", `\`\`\`${result}\`\`\``);
          
              if(usedCommand.has(message.author.id)){

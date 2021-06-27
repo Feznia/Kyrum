@@ -26,7 +26,7 @@ module.exports = {
         deleteAmount = parseInt(dlt[0]);
     }
 
-    message.channel.bulkDelete(deleteAmount + 1, true);
+    
 
     if(usedCommand.has(message.author.id)){
         const cooldownEmbed = new Discord.MessageEmbed()
@@ -36,7 +36,9 @@ module.exports = {
 
     message.channel.send(cooldownEmbed)
     } else {
-        
+
+        message.channel.bulkDelete(deleteAmount + 1, true); //moved
+
         await message.channel.send(`Deleted **${deleteAmount}** Messages.`).then(m => m.delete({timeout: 2500}))
         
         usedCommand.add(message.author.id);

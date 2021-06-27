@@ -8,7 +8,7 @@ module.exports = {
       run: (client, message, args) => {
         let password = [
             'password',
-            '12345678',
+            'simp4fez',
             'incorrect',
             'gayestofthemall',
             'uradopted',
@@ -24,7 +24,7 @@ module.exports = {
             'wow that is small',
             'quit sucking so hard',
             'pepe',
-            '-cries in spanish-'
+            'daddy it won\'t fit'
             ]
             let domain =[
             'gmail.com',
@@ -33,11 +33,11 @@ module.exports = {
             'hotmail.com'
             ]
             let email = [
-            'isgay',
+            'mommymilkers69',
             'lovespp',
             'isanormie',
             'lovesurmommy',
-            'isepic'
+            'lover4fez'
             ]
             let ip = ['153.213.177.72','2.17.161.149','165.17.130.81','78.144.220.112','101.105.148.246','40.57.65.227','67.136.197.20'
             ,'187.80.239.11','204.48.20.44','140.117.141.251','59.234.133.205','162.76.240.85','238.163.1.197','90.95.215.99','9.210.105.248',

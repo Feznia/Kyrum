@@ -13,7 +13,7 @@ module.exports = {
     .setTitle('Rock Paper Scissors (RPS)')
     .setDescription('React with one of the emojis to play.')
     .setTimestamp()
-    .setColor('RANDOM')
+    .setColor('BLACK')
     let msg = await message.channel.send(startEmbed)
     await msg.react("🗻")
     await msg.react("📄")
@@ -46,7 +46,7 @@ module.exports = {
     
     ${winning}`)
     .setFooter(footer)
-    .setColor('RANDOM')
+    .setColor('BLACK')
     
     await msg.edit(newEmbed)
     await msg.reactions.removeAll()

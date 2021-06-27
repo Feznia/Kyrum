@@ -4,7 +4,7 @@ module.exports = {
     name: "eval",
       aliases: ["evaluation"],
       category: "Developer",
-      cooldown: "",
+      cooldown: ")0 Seconds",
       description: "Only the bot owner may use this",
       usage: "=eval <code>",
       permissions: "BOT_OWNER",

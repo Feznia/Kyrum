@@ -2,9 +2,9 @@ module.exports = {
     name: "slowmode",
         aliases: ["sm", "slomo"],
         category: "Utilities",
-        cooldown: "",
+        cooldown: "0 Seconds",
         description: "Set the slowmode for the channel!",
-        usage: "=slowmode <time> <reason>",
+        usage: "=slowmode <time>",
         run: async (bot, message, args) => {
             
 

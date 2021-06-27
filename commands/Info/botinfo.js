@@ -19,15 +19,15 @@ module.exports = {
         .addField("__Uptime__", `${ms(client.uptime)}!`, true)
         .addField("__Ping__", `${client.ws.ping}ms!`, true)
         .setFooter(`Requested by ${message.member.user.tag}`)
-        .setThumbnail('https://cdn.discordapp.com/avatars/777159864362336277/4e3f15ed204317a11d6b741120cf6e6e.png')
-        .setColor("PURPLE")
+        .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: 'png' }))
+        .setColor("BLACK")
         .setTimestamp()
         
         if(usedCommand.has(message.author.id)){
             const cooldownEmbed = new Discord.MessageEmbed()
     .setTitle("Woahh Calm Down")
     .setDescription(`Slow down dude, this command has a cooldown of **10** seconds.`)
-    .setColor("PURPLE")
+    .setColor("BLACK")
 
     message.channel.send(cooldownEmbed)
         } else {

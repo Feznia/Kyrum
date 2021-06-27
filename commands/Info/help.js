@@ -16,9 +16,9 @@ module.exports = {
     if(!helpArgs[0]) {
         var embed0 = new Discord.MessageEmbed()
             .setAuthor(`Here are the Avaible Commands to use:`)
-            .setDescription('```8ball || angry || avatar || bins || coinflip || DM || Docs || hack || howgay || howsmart || lenny || meme || poll || pp || roll || roll || rps || say || servercount || sexy || simprate || snipe || stats ||  strong || weather```')
-            .addFields({ name: 'Prefix', value: '```!>```', inline: true})
-            .setColor('BLUE')
+            .setDescription('```COMMAND BEING UPDATED```')
+            .addFields({ name: 'Prefix', value: '```=```', inline: true})
+            .setColor('PURPLE')
             
             if(usedCommand.has(message.author.id)){
                 message.channel.send('You cannot use the command beacuse of the cooldown.')
@@ -31,7 +31,7 @@ module.exports = {
                     usedCommand.delete(message.author.id);
                 }, 5000); //You can set the ammount of the cooldown here! Its Formated to Miliseconds.
             }
-    }
+    };
 
     if(helpArgs[0]) {
         let command = helpArgs[0];
@@ -44,7 +44,7 @@ module.exports = {
             .setDescription(`
             
             - **Command's Aliases:** ${command.aliases || "No Aliases"}
-            - **Command's Usage:** ${command.category || "No Category"}
+            - **Command's Category:** ${command.category || "No Category"}
             - **Command's Cooldown:** ${command.cooldown || "No Cooldown"}    
             - **Command's Description:** ${command.description || "No Description"}
             - **Command's Permissions:** ${command.permissions || "No Permissions"}
@@ -52,7 +52,7 @@ module.exports = {
             
             
             `)
-            .setColor('BLUE')
+            .setColor('PURPLE')
 
             if(usedCommand.has(message.author.id)){
                 message.channel.send('You cannot use the command beacuse of the cooldown.')

@@ -117,14 +117,14 @@ module.exports = {
 
             let helpembed = new Discord.MessageEmbed()
             .setTitle("Simprate Machine")
-            .setColor(`PURPLE`)
+            .setColor(`BLACK`)
             .addField("Answer", `\`\`\`${result}\`\`\``);
          
              if(usedCommand.has(message.author.id)){
                 const cooldownEmbed = new Discord.MessageEmbed()
     .setTitle("Woahh Calm Down")
     .setDescription(`Slow down dude, this command has a cooldown of **10** seconds.`)
-    .setColor("PURPLE")
+    .setColor("BLACK")
 
     message.channel.send(cooldownEmbed)
              } else {

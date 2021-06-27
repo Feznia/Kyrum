@@ -26,8 +26,6 @@ client.aliases = new Collection();
 
 client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!`);
-
-    client.user.setPresence("I am Devil") 
 })
 
 client.on("message", async message => {
@@ -55,6 +53,43 @@ client.on("message", async message => {
         command.run(client, message, args);
 });
 
+client.on("guildMemberAdd", member => {
+  const Discord = require('discord.js');
+
+  let welcomeChannel = member.guild.channels.cache.find(channel => channel.id === '858186177478918185');
+
+  let welcomeEmbed = new Discord.MessageEmbed()
+    .setTitle(`Shinobi Joined (@${member.user.tag})`)
+    .addField('**Shinobi Name**', `\`\`\`${member.user.tag}\`\`\``, true)
+    .addField('**Shinobi Count**', `\`\`\`${member.guild.memberCount}\`\`\``, true)
+    .addField('**Guild Name**', `\`\`\`${member.guild.name}\`\`\``, true)
+    .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: 'png' }))
+    .addField('**Date** (MM/DD/YY)', `\`\`\`${new Intl.DateTimeFormat("en-US").format(Date.now())}\`\`\``, true)
+    .setColor(`BLACK`)
+    .setFooter(`Account Creation Date --> ${member.user.createdAt}`)
+    .setImage(`https://i.pinimg.com/originals/21/22/02/21220264ec342d0a6ca98c6cce52f1c6.gif`);
+    
+      welcomeChannel.send(welcomeEmbed)
+});
+
+client.on("guildMemberRemove", member => {
+  const goodbyeChannel = member.guild.channels.cache.find(channel => channel.id === '858473900718424085')
+  const Discord = require('discord.js');
+
+  let goodbyeEmbed = new Discord.MessageEmbed()
+  .setTitle(`Member Left`)
+  .addField('**Shinobi Name**', `\`\`\`${member.user.tag}\`\`\``, true)
+  .addField('**New Shinobi Count**', `\`\`\`${member.guild.memberCount}\`\`\``, true)
+  .addField('**Guild Owner**', `\`\`\`${member.guild.owner.user.tag}\`\`\``, true)
+  .setDescription(`**Rip ${member.user.tag}, they must've gotten clapped by Madara. Yep, they were totally clapped by Madara.**`)
+  .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: 'png' }))
+  .addField('**Date** (MM/DD/YY)', `\`\`\`${new Intl.DateTimeFormat("en-US").format(Date.now())}\`\`\``, true)
+  .setColor(`BLACK`)
+  .setImage("https://media.discordapp.net/attachments/695409733280071780/858548349225664512/madara.gif")
+  
+    goodbyeChannel.send(goodbyeEmbed)
+});
+
 client.snipes = new Map()
 
   client.on('messageDelete', async message => {
@@ -73,6 +108,6 @@ client.snipes = new Map()
     })
   snipes.splice(10)
   message.client.snipes.set(message.channel.id, snipes)
-  })
+  });
 
 client.login(token);
